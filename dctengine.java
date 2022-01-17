@@ -71,5 +71,17 @@ public class dctengine {
 		return output;
 		
 	}
+	public int[][]DiscreteOutput(double[][] dct) {
+		double[][] changetoInt = dct;
+		int[][] output = new int[8][8];
+
+		for(int i=0;i<8;i++) {
+			for(int a=0;a<8;a++) {
+				Double newData = new Double(changetoInt[i][a]);
+				output[i][a] = newData.intValue();
+			}
+		}
+		return output;
+	}
 
 }
